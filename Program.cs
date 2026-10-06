@@ -118,39 +118,55 @@
 // Console.WriteLine($"Задачи: №{assigned[0]} и №{assigned[1]}");
 
 
-// Вариант 2
-Console.Write("Введите число: ");
-int score = int.Parse(Console.ReadLine());
+// // Вариант 2
+// Console.Write("Введите число: ");
+// int score = int.Parse(Console.ReadLine());
 
-string result = score switch
+// string result = score switch
+// {
+//     >= 0 and <= 39 => "Неудовлетворительно",
+//     >= 40 and <= 59 => "Удовлетворительно",
+//     >= 60 and <= 79 => "Хорошо",
+//     >= 80 and <= 100 => "Отлично",
+//     _ => "Ошибка"
+
+// };
+
+// Console.WriteLine(result);
+
+
+// //Вариант 8
+// Console.Write("Введите тип транспорта: (автобус, метро, такси) ");
+// string type = Console.ReadLine();
+
+// switch (type)
+// {
+//     case "автобус":
+//         Console.WriteLine("Наземный транспорт");
+//         break;
+//     case "метро":
+//         Console.WriteLine("Подземный транспорт");
+//         break;
+//     case "такси":
+//         Console.WriteLine("Индивидуальный транспорт");
+//         break;
+//     default:
+//         Console.WriteLine("Неизвестный транспорт");
+//         break;
+// }
+
+
+//Дополнительное задание ★★★
+
+int number = 42;
+
+string result = number switch
 {
-    >= 0 and <= 39 => "Неудовлетворительно",
-    >= 40 and <= 59 => "Удовлетворительно",
-    >= 60 and <= 79 => "Хорошо",
-    >= 80 and <= 100 => "Отлично",
-    _ => "Ошибка"
-
+    1 or 2 or 3 => "Маленькое число",
+    >= 0 and <= 9 => "Однозначное",
+    >= 10 and <= 99 => "Двузначное",
+    >= 100 => "Трёхзначное или больше",
+    _ => "Отрицательное"
 };
 
 Console.WriteLine(result);
-
-
-//Вариант 8
-Console.Write("Введите тип транспорта: (автобус, метро, такси) ");
-string type = Console.ReadLine();
-
-switch (type)
-{
-    case "автобус":
-        Console.WriteLine("Наземный транспорт");
-        break;
-    case "метро":
-        Console.WriteLine("Подземный транспорт");
-        break;
-    case "такси":
-        Console.WriteLine("Индивидуальный транспорт");
-        break;
-    default:
-        Console.WriteLine("Неизвестный транспорт");
-        break;
-}
